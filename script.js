@@ -63,3 +63,54 @@ document
     message.remove();
     // message.parentElement.removeChild(message);
   });
+
+// message.style.backgroundColor = '#37383d';
+// message.style.width = '120%';
+
+// console.log(getComputedStyle(message).color);
+
+// message.style.height =
+//   Number.parseFloat(getComputedStyle(message).height, 10) + 40 + 'px';
+
+// document.documentElement.style.setProperty('--color-primary', 'orangered');
+
+// const logo = document.querySelector('.nav__logo');
+// logo.alt = 'Beautiful minimalist logo';
+// logo.setAttribute('company', 'Bankist');
+
+// logo.getAttribute('src');
+// const link = document.querySelector('.nav__link--btn');
+
+// console.log(link.href);
+// console.log(link.getAttribute('href'));
+
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
+
+btnScrollTo.addEventListener('click', function (e) {
+  // const s1coords = section1.getBoundingClientRect();
+  // console.log(s1coords);
+
+  // console.log(e.target.getBoundingClientRect());
+
+  // console.log('Current scroll(X/Y)');
+
+  // console.log(
+  //   'height/width viewport',
+  //   document.documentElement.clientHeight,
+  //   document.documentElement.clientWidth
+  // );
+
+  // window.scrollTo(s1coords.left, s1coords.top + window.scrollX);
+
+  section1.scrollIntoView({ behavior: 'smooth' });
+});
+
+const h1 = document.querySelector('h1');
+
+h1.addEventListener('mouseenter', function () {
+  alert('addEventListener: Great');
+});
+// h1.onmouseenter = function (e) {
+//   alert('addEventListener: Great');
+// };
